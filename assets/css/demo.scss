@@ -1,23 +1,12 @@
-// ::Imports pre-render. Must be after reset
+// ::Imports
 // ------------------------------------------------------------
-@import "base/libs/required";
-@import "base/libs/reset";
-@import "base/libs/settings";
-@import "base/libs/mixins";
-@import "base/libs/placeholders";
+@import "sassaparilla/sassaparilla";
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
 @import url(http://fonts.googleapis.com/css?family=Fira+Mono);
 
 /* ::Base styles */
 /* ------------------------------------------------------------ */
-
-html {
-	font-size: 100%;
-	@include respond-to-max(768px) { // Stop at precise width, as we're talking about devices
-		-webkit-text-size-adjust: 100%;	// Stops text scaling in iOS.
-	}
-}
 
 body {
 	font-family: 'Roboto', sans-serif;
@@ -26,61 +15,8 @@ body {
 	font-weight: 400;
 }
 
-
-// General link control
-// ------------------------------------------------------------
-
-// Hat tip: http://robsterlini.co.uk/posts/opentype-and-selection-dont-mix
-::selection {
-	 background: $action;
-	 color: #fff;
-	 text-shadow: inherit;
-}
-
-a {
-	color: $action;
-	text-decoration:none;
-	word-wrap: break-word;
-	@include link-active-styles { 	// Mixin for interactions (hover,focus,active)
-		color: $action-respond;
-	}	
-}
-
-
-// General image contral
-// ------------------------------------------------------------
-
-.max-width {
-	@extend %max-width;
-}
-
-
 // General type control
 // ------------------------------------------------------------
-
-p, span, cite, ol, ul, pre, label, input, textarea 	{ 
-	@include adjust-font-size-to($para); 
-}
-
-h1,h2,h3,h4,h5,h6 { 
-	color: $heading-color;
-}
-
-ul, ol 	{ 
-	@include nobullet; 
-} 						
-	
-li { 
-	line-height: inherit; 
-}	
-
-em, i, q { 
-	font-style: italic; 
-}	
-			
-strong, b { 
-	font-weight: 500; 
-}
 
 .type-light {
 	font-weight: 300;
@@ -90,17 +26,4 @@ strong, b {
 /* ::Import styles */
 // Must be after globals for correct cascade
 /* ------------------------------------------------------------ */
-
-@import "base/libs/forms";
-@import "demo/*"; 
-
-
-/* ::Print */
-/* ------------------------------------------------------------ */
-
-@media print {
-	body {
-		@include adjust-leading-to(2);
-		font-size: percentage(10 / 16);
-	}
-}
+@import "demo/*";
