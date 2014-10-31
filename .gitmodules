@@ -1,0 +1,3 @@
+[submodule "assets/css/sassaparilla"]
+	path = assets/css/sassaparilla
+	url = git@github.com:fffunction/sassaparilla-core.git
