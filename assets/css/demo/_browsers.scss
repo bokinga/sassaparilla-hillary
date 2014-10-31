@@ -1,7 +1,6 @@
 // ::Imports we need
 // ------------------------------------------------------------
 
-@import "base/libs/settings"; @import "base/libs/mixins"; @import "base/libs/placeholders";
 
 // The browser
 // ------------------------------------------------------------
@@ -116,7 +115,7 @@
 .ui-browser__canvas {
 	background: #222;
 	min-height: 800px;
-	font-size: 1em;	
+	font-size: 1em;
 	overflow: hidden;
 	font-family: 'Fira Mono', monospace;
 }

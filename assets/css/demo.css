@@ -84,7 +84,7 @@ textarea {
   height: auto;
 }
 
-select, input, textarea, button {
+body, select, input, textarea, button {
   font-family: Helvetica, sans-serif;
 }
 
@@ -100,10 +100,8 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   background: #fff;
   color: #777;
-  font-weight: 400;
 }
 
 ::selection {
@@ -138,20 +136,14 @@ li {
   line-height: inherit;
 }
 
+strong, b {
+  font-weight: 700;
+}
+
 em, i, q {
   font-style: italic;
 }
 
-strong, b {
-  font-weight: 500;
-}
-
-.type-light, .header__marque span {
-  font-weight: 300;
-}
-
-/* ::Import styles */
-/* ------------------------------------------------------------ */
 label, legend, select {
   display: block;
   color: #333;
@@ -242,6 +234,29 @@ input[type="checkbox"]:focus {
   outline-offset: -2px;
 }
 
+/* ::Print */
+/* ------------------------------------------------------------ */
+@media print {
+  body {
+    line-height: 0.55em;
+    font-size: 62.5%;
+  }
+}
+/* ::Base styles */
+/* ------------------------------------------------------------ */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  color: #777;
+  font-weight: 400;
+}
+
+.type-light, .header__marque span {
+  font-weight: 300;
+}
+
+/* ::Import styles */
+/* ------------------------------------------------------------ */
 .background-cover, .as-svg {
   background-size: cover;
   background-position: center center;
@@ -268,24 +283,6 @@ input[type="checkbox"]:focus {
 
 .background-anchor-center-right {
   background-position: center right;
-}
-
-.row, .row__colspaced {
-  *zoom: 1;
-}
-.row:after, .row__colspaced:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.max-width, .fusion img {
-  max-width: 100%;
-  height: auto;
-}
-
-select, input, textarea, button {
-  font-family: Helvetica, sans-serif;
 }
 
 .browser {
@@ -2515,13 +2512,4 @@ html.lt-ie9 .svg-logos {
 
 .is-typeset p:last-of-type {
   margin-bottom: 0;
-}
-
-/* ::Print */
-/* ------------------------------------------------------------ */
-@media print {
-  body {
-    line-height: 0.55em;
-    font-size: 62.5%;
-  }
 }
