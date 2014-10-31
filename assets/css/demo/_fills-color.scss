@@ -1,0 +1,25 @@
+// ------------------------------------------------------------
+// Colours and fills
+// Add more to the array to populate consistent names across
+// colors, fills (aka background) and rules (aka borders)
+// ------------------------------------------------------------
+
+@each $number, $color in 
+		('white', $color-white),
+		('black', $color-black),
+		('1', $color-raspberry-beret),
+		('2', $color-shateal-oneil),
+		('3', #f1fafb),
+		('4', #888),
+		('5', #ddd)
+	{
+	.color-#{$number} {
+		color: $color;
+	}
+	.fill-#{$number} {
+		background-color: $color;
+	}
+	.rule-#{$number} {
+		border-color: $color;
+	}
+}

@@ -1,0 +1,45 @@
+{
+  "autoPrefixer": null,
+  "convertHtml": {
+    "extension": ".html",
+    "relativePaths": false
+  },
+  "customRuby": false,
+  "customRubyPath": null,
+  "customTodos": null,
+  "debug": false,
+  "domain": null,
+  "followLeader": true,
+  "ftpSettings": null,
+  "gitHubPages": null,
+  "ignoreDir": [
+    "ignore"
+  ],
+  "less": null,
+  "lintScripts": false,
+  "modelSource": null,
+  "optimiseImages": true,
+  "optimiseSVG": true,
+  "password": null,
+  "preprocessorLocations": [
+    "assets"
+  ],
+  "preprocessorScriptOutput": "assets/js",
+  "preprocessorStyleOutput": "assets/css",
+  "projectDescription": "Sassaparilla – Hillary Edition",
+  "projectName": "sassaparilla-hillary",
+  "publishedId": "18561",
+  "remoteDebugPort": 0,
+  "routes": null,
+  "sass": null,
+  "serverHostname": "localhost",
+  "serverPort": null,
+  "simpleModeFileTypes": null,
+  "simpleModePartnerServer": null,
+  "sitemap": true,
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "mixture",
+  "useCompass": true
+}

@@ -1,0 +1,272 @@
+{% block content %}
+
+<header class="header" role="banner">
+	<div class="row">
+		<h1 class="header__marque">
+			<a href="/" rel="home">Sassaparilla</a>
+			<span>Hillary Edition</span>
+		</h1>
+		<nav class="navigation-primary">
+			<ul>
+				<li class="navigation-primary__item"><a href="/demo" class="{% if mixture.url contains 'demo' %} color-1 {% endif %}">Demo</a></li>
+				<li class="navigation-primary__item"><a href="/grid" class="{% if mixture.url contains 'grid' %} color-1 {% endif %}">Grid</a></li>
+				<li class="navigation-primary__item"><a href="">Docs</a></li>
+				<li class="navigation-primary__item hide-at1 inline-show-at6"><a href="">Download</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<section class="section section--caption fill-3">
+	<div class="row">
+		<div class="caption caption--align-center">
+			<h1 class="as-heading-headline">Start your next web project even faster with our friend and yours, Sassaparilla</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="browser">
+			<div class="ui-item">
+				<div class="ui-item__browser ui-item__browser--center">
+					<div class="ui-browser">
+						<div class="ui-browser__top-bar">
+							<span>Code editors are sexy right?</span>
+						</div>
+						<div class="ui-browser__canvas">
+							<div class="ui-browser__canvas__sidebar">
+								<ul>
+									<li class="color-3">
+										sassaparilla
+										<ul>
+											<li class="color-3">
+												assets
+												<ul>
+													<li class="color-3">
+														css
+														<ul>
+															<li class="color-4">screen.scss</li>
+															<li class="color-4">screen.css</li>
+														</ul>
+														<ul>
+															<li class="color-3">
+																libs
+																<ul>
+																	<li class="color-4">_color.scss</li>
+																	<li class="color-4">_forms.scss</li>
+																	<li class="color-4">_mixins.scss</li>
+																	<li class="color-4">_placeholders.scss</li>
+																	<li class="color-4">_required.scss</li>
+																	<li class="color-4">_reset.scss</li>
+																	<li class="color-4">_settings.scss</li>
+																</ul>
+															</li>
+														</ul>
+														<ul>
+															<li class="color-3">
+																modules
+																<ul>
+																	<li class="color-4">_backgrounds.scss</li>
+																	<li class="color-4">_grid.scss</li>
+																	<li class="color-4">_ratios.scss</li>
+																	<li class="color-4">_rules.scss</li>
+																	<li class="color-4">_typography.scss</li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="ui-browser__canvas__content">
+								<ul>
+									<li class="color-4">
+										// Heading sizes and vertical rhythm<br>
+										// -------------
+									</li>
+									<li class="color-4 comment">// Set sizing for headings</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-headline</span> {
+										<span class="color-3"><span class="color-1">@include</span> adjust-font-size-to<span class="color-2">($alpha)</span>;</span> }
+									</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-largest</span> {
+										<span class="color-3"><span class="color-1">@include</span> adjust-font-size-to<span class="color-2">($beta)</span>;</span> }
+									</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-medium</span> {
+										<span class="color-3"><span class="color-1">@include</span> adjust-font-size-to<span class="color-2">($gamma)</span>;</span> }
+									</li>
+									<li class="color-4 comment">// Set rhythm for headings</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-headline--typeset-leader</span> {
+										<span class="color-3">margin-top: rhythm (<span class="color-2">3, $alpha</span>);</span> }
+									</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-headline--typeset-trailer</span> {
+										<span class="color-3">margin-bottom: rhythm (<span class="color-2">1, $alpha</span>);</span> }
+									</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-largest--typeset-leader</span> {
+										<span class="color-3">margin-top: rhythm (<span class="color-2">3, $beta</span>);</span> }
+									</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-largest--typeset-trailer</span> {
+										<span class="color-3">margin-bottom: rhythm (<span class="color-2">1, $beta</span>);</span> }
+									</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-medium--typeset-leader</span> {
+										<span class="color-3">margin-top: rhythm (<span class="color-2">3, $gamma</span>);</span> }
+									</li>
+									<li class="color-4">
+										<span class="color-2">.as-heading-medium--typeset-trailer</span> {
+										<span class="color-3">margin-bottom: rhythm (<span class="color-2">1, $gamma</span>);</span> }
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section section--default rule rule--overline">
+	<div class="row">
+		<div class="row__colspaced">
+			<div class="colspan6-3 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="caption">
+					<h2 class="as-heading-largest as-heading-largest--typeset-trailer">Introducing the Hillary Edition</h2>
+					<div class="is-typeset max-meter">
+						<p>Sassaparilla is a fast way to start your responsive web design projects that harnesses the power of <a rel="external" href="http://sass-lang.com/" title="Sass - Syntactically Awesome Stylesheets">Sass</a> and <a rel="external" href="http://compass-style.org/" title="Compass is an open-source CSS Authoring Framework">Compass</a>. It comes with just enough to get you on your way, and no unnecessary extras, so you can spend less time deleting what you don’t need and more time building.</p>
+					</div>
+				</div>
+			</div>
+			<div class="colspan6-2 push6-1 as-grid with-gutter with-trailer trailer-disable6">
+				<div id="fusion_ad" class="fusion"><a href="http://fusionads.net" class="power">Powered by Fusion</a></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section section--pair section--default rule rule--overline">
+	<div class="row row--gutterless">
+		<div class="row__colspaced">
+			<div class="colspan6-3 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="caption caption--align-center caption--minor">
+					<div class="as-svg svg-type ico ico--160"></div>
+					<h2 class="as-heading-largest as-heading-largest--typeset-trailer">Better typography</h2>
+					<div class="is-typeset">
+						<p>Nail your vertical rhythm with some help from compass’ awesome <a href="http://compass-style.org/reference/compass/typography/vertical_rhythm/">typography module</a>. You’ll never need to spend hours on calculations again, giving you more time to focus on creating better typography and overall rhythm to your designs.</p>
+					</div>
+				</div>
+			</div>
+			<div class="colspan6-3 as-grid with-gutter">
+				<div class="caption caption--align-center caption--minor">
+					<div class="as-svg svg-grid ico ico--160"></div>
+					<h2 class="as-heading-largest as-heading-largest--typeset-trailer">Flexible grids</h2>
+					<div class="is-typeset">
+						<p>Create a flexible, expandable grid system in no time with some simple settings. You can even use your own syntax with only the most minor of set-up changes. <a href="/grid/">View an example of the possibilities</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section section--default fill-3 rule rule--overline">
+	<div class="row">
+		<div class="row__colspaced">
+			<div class="colspan6-3 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="caption">
+					<h2 class="as-heading-largest as-heading-largest--typeset-trailer">Set&ndash;up is simple</h2>
+					<div class="is-typeset max-meter">
+						<p>If you’ve used <a rel="external" href="http://sass-lang.com">Sass</a> and <a rel="external" href="http://compass-style.org/">Compass</a> before, or if you’ve never tried them, getting started is really easy. We’ve tried to make it as painless as possible, using as little set-up time as required. We also thoroughly recommend <a rel="external" href="http://mixture.io">Mixture</a> to super&ndash;charge your set&ndash;up (there's a Sassaparilla boiler plate built&ndash;in to mixture).</p>
+					</div>
+				</div>
+			</div>
+			<div class="colspan6-2 push6-1 as-grid with-gutter with-trailer trailer-disable6">
+				<div class="as-svg svg-logos"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="hero">
+	<div class="row row--gutterless">
+		<div class="hide-at1 inline-show-at6 colspan6-3 as-grid">
+			<div class="hero__square ratio-16-9 background-cover" style="background-image: url({{ "mountain1.jpg" | asset_url }});">
+				<a href="">
+					<div class="hero__square__caption">
+						<h2>Fork (github)</h2>
+					</div>
+				</a>
+			</div>
+			<div class="hide-at1 inline-show-at6 hero__square ratio-16-9 background-cover" style="background-image: url({{ "mountain2.jpg" | asset_url }});">
+				<a href="">
+					<div class="hero__square__caption">
+						<h2>Download (zip)</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="colspan6-3 as-grid">
+			<div class="hero__square ratio-9-8 background-cover" style="background-image: url({{ "mountain3.jpg" | asset_url }});">
+				<a href="">
+					<div class="hero__square__caption">
+						<h2>Documentation</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<footer class="footer section section--default fill-black" role="footer">
+	<div class="row">
+		<div class="row__colspaced">
+			<div class="colspan4-4 colspan6-2 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="footer__module color-3">
+					<h4 class="color-white as-heading-large as-heading-large--typeset-trailer">Made by <a href="http://fffunction.co" rel="xo">fffunction</a></h4>
+					<div class="is-typeset">
+						<p>We use Sassaparilla in our everyday work, and we thought you might like to use it too. Sassaparilla was made with love, tea and biscuits in the South West of the United Kingdom.</p>
+					</div>
+				</div>
+			</div>
+			<div class="colspan4-2 colspan6-2 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="footer__module color-3">
+					<h4 class="color-white as-heading-large as-heading-large--typeset-trailer">Licensing</h4>
+					<div class="is-typeset">
+						<p>Sassaparilla is licensed under <a rel="license" href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>, for which the TL:DR is; You can do pretty much what you want with it, other than sell it 'as-is'.</p>
+					</div>
+				</div>
+			</div>
+			<div class="colspan4-2 colspan6-2 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="footer__module color-3">
+					<h4 class="color-white as-heading-large as-heading-large--typeset-trailer">Have Questions?</h4>
+					<div class="is-typeset">
+						<p>Please give us a follow on <a href="http://twitter.com/fffunction">twitter</a> where we’ll happily answer your questions.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="footer__boring is-typeset">
+			<p class="legal">Copyright &copy;2014. All rights reserved unless stated. Designed &amp; built with love, tea and biscuits. Set in Roboto. Registered in the UK, company number 07905780, VAT number 130365154. Unit 12, Jubilee Wharf, Penryn, TR10 8FG, United Kingdom.</p>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript">
+(function(){
+  var fusion = document.createElement('script');
+  fusion.src = window.location.protocol + '//adn.fusionads.net/api/1.0/ad.js?zoneid=261&rand=' + Math.floor(Math.random()*9999999);
+  fusion.async = true;
+  (document.head || document.getElementsByTagName('head')[0]).appendChild(fusion);
+})();</script>
+
+{% endblock %}

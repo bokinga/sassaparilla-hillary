@@ -1,0 +1,20 @@
+// ------------------------------------------------------------
+// Footer
+// ------------------------------------------------------------
+
+.footer {
+	overflow: hidden;
+	margin-top: -4px; // Deal with image seaming
+	position: relative;
+	z-index: 5;
+}
+
+.footer__module {
+	@include respond-to($c-vp, true) {
+		padding-right: 10%;
+	}
+}
+
+.footer__boring {
+	margin-top: $internal-spacing-percent*2;
+}

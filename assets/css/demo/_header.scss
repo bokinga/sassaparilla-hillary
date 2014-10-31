@@ -1,0 +1,23 @@
+// ------------------------------------------------------------
+// Header
+// ------------------------------------------------------------
+
+.header {
+	overflow: hidden;
+	padding: $internal-spacing 0;
+	border: $default-border-width solid $default-border-color;
+}
+
+.header__marque {
+	display: inline-block;
+	float: left;
+	a {
+		color: $heading-color;
+	}
+	span {
+		@extend .type-light;
+		@include respond-to-max($b-vp) {
+			display: none;
+		}
+	}
+}

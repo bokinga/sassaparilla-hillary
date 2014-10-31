@@ -1,0 +1,150 @@
+{% block content %}
+
+<header class="header" role="banner">
+	<div class="row">
+		<h1 class="header__marque">
+			<a href="/" rel="home">Sassaparilla</a>
+			<span>Hillary Edition</span>
+		</h1>
+		<nav class="navigation-primary">
+			<ul>
+				<li class="navigation-primary__item"><a href="/demo" class="{% if mixture.url contains 'demo' %} color-1 {% endif %}">Demo</a></li>
+				<li class="navigation-primary__item"><a href="/grid" class="{% if mixture.url contains 'grid' %} color-1 {% endif %}">Grid</a></li>
+				<li class="navigation-primary__item"><a href="">Docs</a></li>
+				<li class="navigation-primary__item hide-at1 inline-show-at6"><a href="">Download</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<section class="section section--default fill-3">
+	<div class="row">
+		<div class="caption caption--align-center">
+			<h1 class="as-heading-headline">Grids are unique. So make them your own</h1>
+		</div>
+	</div>
+</section>
+
+<section class="section section--default rule rule--overline">
+	<div class="row">
+		<div class="caption">
+			<h2 class="as-heading-medium as-heading-medium--typeset-trailer">Gutterless grid</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="colspan4-4 colspan6-6 colspan12-3 as-grid with-trailer1 trailer-disable12">
+			<div class="row__module fill-4"></div>
+		</div>
+		<div class="colspan4-4 colspan6-2 colspan12-3 as-grid with-trailer1 trailer-disable12">
+			<div class="row__module fill-5"></div>
+		</div>
+		<div class="colspan4-2 colspan6-2 colspan12-3 as-grid with-trailer1 trailer-disable12">
+			<div class="row__module fill-4"></div>
+		</div>
+		<div class="colspan4-2 colspan6-2 colspan12-3 as-grid with-trailer1 trailer-disable12">
+			<div class="row__module fill-5"></div>
+		</div>
+	</div>
+<br/> <!-- Demo use only br tag -->
+	<div class="row">
+		<div class="colspan4-2 colspan6-4 colspan12-4 as-grid with-trailer1 trailer-disable12">
+			<div class="row__module fill-4"></div>
+		</div>
+		<div class="colspan4-2 colspan6-2 colspan12-8 as-grid with-trailer1 trailer-disable12">
+			<div class="row__module fill-5"></div>
+		</div>
+	</div>
+<br/> <!-- Demo use only br tag -->
+	<div class="row">
+		<div class="colspan4-2 colspan6-4 colspan12-6 as-grid with-trailer1 trailer-disable12">
+			<div class="row__module fill-4"></div>
+		</div>
+		<div class="colspan4-2 colspan6-2 colspan12-3 push12-3 as-grid with-trailer1 trailer-disable12">
+			<div class="row__module fill-5"></div>
+		</div>
+	</div>
+</section>
+
+<section class="section section--default rule rule--overline">
+	<div class="row">
+		<div class="caption">
+			<h2 class="as-heading-medium as-heading-medium--typeset-trailer">Guttered grid</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="row__colspaced">
+			<div class="colspan4-4 colspan6-6 colspan12-3 as-grid with-gutter with-trailer1 trailer-disable12">
+				<div class="row__module fill-4"></div>
+			</div>
+			<div class="colspan4-4 colspan6-2 colspan12-3 as-grid with-gutter with-trailer1 trailer-disable12">
+				<div class="row__module fill-5"></div>
+			</div>
+			<div class="colspan4-2 colspan6-2 colspan12-3 as-grid with-gutter with-trailer1 trailer-disable12">
+				<div class="row__module fill-4"></div>
+			</div>
+			<div class="colspan4-2 colspan6-2 colspan12-3 as-grid with-gutter with-trailer1 trailer-disable12">
+				<div class="row__module fill-5"></div>
+			</div>
+		</div>
+	</div>
+<br/> <!-- Demo use only br tag -->
+	<div class="row">
+		<div class="row__colspaced">
+			<div class="colspan4-2 colspan6-4 colspan12-4 as-grid with-gutter with-trailer1 trailer-disable12">
+				<div class="row__module fill-4"></div>
+			</div>
+			<div class="colspan4-2 colspan6-2 colspan12-8 as-grid with-gutter with-trailer1 trailer-disable12">
+				<div class="row__module fill-5"></div>
+			</div>
+		</div>
+	</div>
+<br/> <!-- Demo use only br tag -->
+	<div class="row">
+		<div class="row__colspaced">
+			<div class="colspan4-2 colspan6-4 colspan12-6 as-grid with-gutter with-trailer1 trailer-disable12">
+				<div class="row__module fill-4"></div>
+			</div>
+			<div class="colspan4-2 colspan6-2 colspan12-3 push12-3 as-grid with-gutter with-trailer1 trailer-disable12">
+				<div class="row__module fill-5"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer class="footer section section--default fill-black" role="footer">
+	<div class="row">
+		<div class="row__colspaced">
+			<div class="colspan4-4 colspan6-2 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="footer__module color-3">
+					<h4 class="color-white as-heading-large as-heading-large--typeset-trailer">Made by <a href="http://fffunction.co" rel="xo">fffunction</a></h4>
+					<div class="is-typeset">
+						<p>We use Sassaparilla in our everyday work, and we thought you might like to use it too. Sassaparilla was made with love, tea and biscuits in the South West of the United Kingdom.</p>
+					</div>
+				</div>
+			</div>
+			<div class="colspan4-2 colspan6-2 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="footer__module color-3">
+					<h4 class="color-white as-heading-large as-heading-large--typeset-trailer">Licensing</h4>
+					<div class="is-typeset">
+						<p>Sassaparilla is licensed under <a rel="license" href="http://opensource.org/licenses/MIT">The MIT License (MIT)</a>, for which the TL:DR is; You can do pretty much what you want with it, other than sell it 'as-is'.</p>
+					</div>
+				</div>
+			</div>
+			<div class="colspan4-2 colspan6-2 as-grid with-gutter with-trailer1 trailer-disable6">
+				<div class="footer__module color-3">
+					<h4 class="color-white as-heading-large as-heading-large--typeset-trailer">Have Questions?</h4>
+					<div class="is-typeset">
+						<p>Please give us a follow on <a href="http://twitter.com/fffunction">twitter</a> where we’ll happily answer your questions.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="footer__boring is-typeset">
+			<p class="legal">Copyright &copy;2014. All rights reserved unless stated. Designed &amp; built with love, tea and biscuits. Set in Roboto. Registered in the UK, company number 07905780, VAT number 130365154. Unit 12, Jubilee Wharf, Penryn, TR10 8FG, United Kingdom.</p>
+		</div>
+	</div>
+</footer>
+
+{% endblock %}

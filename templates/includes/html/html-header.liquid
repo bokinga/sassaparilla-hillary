@@ -1,0 +1,26 @@
+<!doctype html>
+<!--[if lt IE 9 ]> <html lang="en-GB" class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en-GB" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-GB" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="initial-scale=1">
+	<!-- TODO: Give it a title-->
+	<title>Sassaparilla &mdash; Hillary Edition</title>
+	{% if mixture.url contains 'grid' or mixture.url contains 'demo' %}
+		{{ "demo.css" | asset_url | stylesheet_tag }}
+	{% else %}
+		{{ "screen.css" | asset_url | stylesheet_tag }}
+	{% endif %}
+	
+	{% block styles %}{% endblock %}		
+	<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+	<!-- TODO: Download a custom build of modernizer to suit the project -->
+	<script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+</head>
+
+<body>
+	<!-- canvas Start  -->
+	<div class="canvas">
+		{% block header %}{% endblock %}

@@ -1,0 +1,18 @@
+// ------------------------------------------------------------
+// Icons
+// ------------------------------------------------------------
+
+// For sizing see _sizing.scss
+// ------------------------------------------------------------
+
+// Default icon behavior
+.ico {
+	text-indent: -9999em;
+	display: inline-block;
+	@extend .background-contain;
+}
+
+// Round corners
+.ico--rounded {
+	border-radius: 50%;
+}

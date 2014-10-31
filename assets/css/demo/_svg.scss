@@ -1,0 +1,39 @@
+// ---------------------------------------
+// Gets svgs and provide fallbacks
+// ---------------------------------------
+
+// Name SVG's, with the exact filename in an array
+$svgs: type, grid, logos;
+
+
+
+// Setup defaults
+// ---------------------------------------
+
+.as-svg {
+	@extend .background-cover;
+}
+
+.svg-logos {
+	max-width: 100%;
+	height: 160px;
+	@extend .background-contain;
+} 
+
+
+// Use compass to base64 encode svgs into css
+// You'll need to create the png fallbacks seperatly,  use something like http://grumpicon.com/ or use something clever link grunt
+// ---------------------------------------
+
+@each $icon in $svgs {
+    .svg-#{$icon} {
+    	background-image: url("../svg/demo/fallbacks/#{$icon}.png");
+    	background-image: url("../svg/demo/#{$icon}.svg");
+    }
+    html.lt-ie9 {
+    	.svg-#{$icon} {
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../svg/demo/fallbacks/#{$icon}.png', sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../svg/demo/fallbacks/#{$icon}.png', sizingMethod='scale')";
+		}
+	}
+}

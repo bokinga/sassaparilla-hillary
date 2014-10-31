@@ -1,0 +1,42 @@
+// ------------------------------------------------------------
+// Sections
+// ------------------------------------------------------------
+
+.section {
+	position: relative;
+}
+
+.section--pair {
+	overflow: hidden;
+	&::before {
+		display: none;
+		content: "";
+		height: 10000px;
+		width: 1px;
+		left: 50%;
+		top: 0;
+		margin-left: -0.5px;
+		position: absolute;
+		background-color: $default-border-color;
+		@include respond-to($c-vp, true) {
+			display: block;
+		}
+	}
+}
+
+.section--default {
+	padding-top: $internal-spacing*2;
+	padding-bottom: $internal-spacing*2;
+	@include respond-to($d-vp, true) {
+		padding-top: $internal-spacing*4;
+		padding-bottom: $internal-spacing*4;
+	}
+	@include respond-to($max-vp) {
+		padding-top: $internal-spacing*6;
+		padding-bottom: $internal-spacing*6;
+	}
+}
+
+.section--caption {
+	padding-top: $internal-spacing-percent*2;
+}

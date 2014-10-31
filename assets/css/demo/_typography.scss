@@ -1,0 +1,279 @@
+// Set your type here
+// You can be as complex or simple as you like
+
+// ------------------------------------------------------------
+// Meter
+// ------------------------------------------------------------
+
+.max-meter {
+	@include respond-to($c-vp, true) {
+		max-width: 600px;
+	}
+}
+
+// ------------------------------------------------------------
+// Headings
+// ------------------------------------------------------------
+
+.as-heading-headline { 
+	@include adjust-font-size-to($delta); 
+	@include respond-to($c-vp, true) {
+		@include adjust-font-size-to($alpha); 
+	}
+} 
+
+.as-heading-largest { 
+	@include adjust-font-size-to($epsilon); 
+	@include respond-to($d-vp, true) {
+		@include adjust-font-size-to($beta); 
+	}
+} 
+	
+.as-heading-large { 
+	@include adjust-font-size-to($epsilon); 
+	@include respond-to($d-vp, true) {
+		@include adjust-font-size-to($gamma); 
+	}
+} 	
+
+.as-heading-medium	{ 
+	@include adjust-font-size-to($zeta); 
+	@include respond-to($d-vp, true) {
+		@include adjust-font-size-to($epsilon); 
+	}
+} 
+	
+.as-heading-normal 	{ 
+	@include adjust-font-size-to($zeta); 
+} 
+	
+.as-heading-small { 
+	@include adjust-font-size-to($eta); 
+} 	
+
+.as-heading-smallest { 
+	@include adjust-font-size-to($eta); 
+} 
+
+
+
+// Other text
+// ------------------------------------------------------------
+	
+.as-para { 
+	@include adjust-font-size-to($para);
+	@include adjust-leading-to(7, $para); 
+}
+
+.as-unordered-list {
+	@include unordered; 
+	padding-left: 1em;
+	li {
+		@extend .as-list-item--typeset;
+	}
+}
+
+.as-ordered-list {
+	@include ordered; 
+	padding-left: 1.25em;
+	li {
+		@extend .as-list-item--typeset;
+	}
+}
+
+.as-nobullet-list {
+	@include nobullet; 
+	li {
+		@extend .as-list-item--typeset;
+	}
+}
+
+.as-blockquote { 
+	line-height: normal;
+	padding: 1em;
+	background: #fff;
+	color: $heading-color;
+	p { 
+		margin-top: 0; 
+	} 
+	cite {
+		display: block;
+		color: $heading-color;
+	}
+}
+
+
+// Typesetting & rhythm matching
+// ------------------------------------------------------------
+
+.as-heading-headline--typeset-trailer { 
+	margin-bottom: rhythm(2, $delta); 
+	@include respond-to($d-vp, true) {
+		margin-bottom: rhythm(2, $alpha); 
+	}
+} 
+
+.as-heading-headline--typeset-leader { 
+	margin-top: rhythm(2, $delta); 
+	@include respond-to($d-vp, true) {
+		margin-top: rhythm(2, $alpha); 
+	}
+} 
+
+//
+
+.as-heading-largest--typeset-trailer { 
+	margin-bottom: rhythm(2, $epsilon); 
+	@include respond-to($d-vp, true) {
+		margin-bottom: rhythm(2, $beta); 
+	}
+} 
+
+.as-heading-largest--typeset-leader { 
+	margin-top: rhythm(6, $epsilon); 
+	@include respond-to($d-vp, true) {
+		margin-top: rhythm(6, $beta); 
+	}
+} 	
+
+//
+
+.as-heading-large--typeset-trailer	{ 
+	margin-bottom: rhythm(2, $epsilon); 
+	@include respond-to($d-vp, true) {
+		margin-bottom: rhythm(2, $gamma); 
+	}
+} 
+
+.as-heading-large--typeset-leader { 
+	margin-top: rhythm(6, $epsilon); 
+	@include respond-to($d-vp, true) {
+		margin-top: rhythm(6, $gamma); 
+	}
+}	
+
+//
+
+.as-heading-medium--typeset-trailer { 
+	margin-bottom: rhythm(2, $zeta);  
+	@include respond-to($d-vp, true) {
+		margin-bottom: rhythm(2, $epsilon); 
+	}	
+} 	
+
+.as-heading-medium--typeset-leader { 
+	margin-top: rhythm(6, $zeta);  	
+	@include respond-to($d-vp, true) {
+		margin-top: rhythm(6, $epsilon); 
+	}
+} 
+
+//
+
+.as-heading-normal--typeset-trailer { 
+	margin-bottom: rhythm(2, $zeta); 
+}  
+
+.as-heading-normal--typeset-leader { 
+	margin-top: rhythm(5, $zeta); 
+}	
+
+//
+
+.as-heading-small--typeset-trailer { 
+	margin-bottom: rhythm(2, $eta); 
+}
+
+.as-heading-small--typeset-leader { 
+	margin-top: rhythm(5, $eta); 
+}
+
+//
+	
+.as-heading-smallest--typeset-trailer	{ 
+	margin-bottom: rhythm(2, $eta); 
+}  
+
+.as-heading-smallest--typeset-leader { 
+	margin-top: rhythm(4, $eta); 
+}
+		
+// Paras
+		
+.as-para--typeset { 
+	margin-bottom: rhythm(2, $para); 
+}
+
+// Lists
+
+.as-list--typeset { 
+	margin: rhythm(2, $para) 0; 
+}
+
+.as-unordered-list--typeset { 
+	@extend .as-list--typeset; 
+}
+
+.as-ordered-list--typeset { 
+	@extend .as-list--typeset;  
+}
+
+.as-list-item--typeset { 
+	margin-bottom: rhythm(1, $para); 
+}
+
+// Blockquotes
+.as-blockquote--typeset { 
+	@extend .as-blockquote; 
+	margin: rhythm(4, $quote) 0 rhythm(4, $quote); 
+}
+
+
+// Use on parent element to style elements within. E.g an article page
+// ------------------------------------------------------------
+
+.is-typeset {
+	.headline { 
+		@extend .as-heading-headline; 	
+		@extend .as-heading-headline--typeset-trailer; 
+	} 
+	h1 { 
+		@extend .as-heading-largest; 	
+		@extend .as-heading-largest--typeset-trailer; 
+		@extend .as-heading-largest--typeset-leader; 
+	} 	
+	h2 { 
+		@extend .as-heading-large; 		
+		@extend .as-heading-large--typeset-trailer; 
+		@extend .as-heading-large--typeset-leader;
+
+	} 	
+	h3, h4	{ 
+		@extend .as-heading-medium; 		
+		@extend .as-heading-medium--typeset-trailer; 
+		@extend .as-heading-medium--typeset-leader;
+		
+	} 	
+	h5, h6 	{ 
+		@extend .as-heading-small; 		
+		@extend .as-heading-small--typeset-trailer; 
+		@extend .as-heading-small--typeset-leader;
+	}  	 	
+	p { 
+		@extend .as-para--typeset; 
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	ol { 
+		@extend .as-ordered-list;
+		@extend .as-ordered-list--typeset; 
+	}
+	ul { 
+		@extend .as-unordered-list;
+		@extend .as-unordered-list--typeset; 
+	}
+	blockquote { 
+		@extend .as-blockquote--typeset; 
+	}
+}

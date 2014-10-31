@@ -1,0 +1,169 @@
+// ::Imports we need
+// ------------------------------------------------------------
+
+@import "base/libs/settings"; @import "base/libs/mixins"; @import "base/libs/placeholders";
+
+// The browser
+// ------------------------------------------------------------
+
+.browser {
+	position: relative;
+	overflow: hidden;
+	margin-top: $internal-spacing*2;
+	@include respond-to($d-vp, true) {
+		margin-top: $internal-spacing*4;
+	}
+}
+
+.ui-item__browser {
+	max-height: 460px;
+	max-width: 480px;
+	background-color: #fff;
+	border: 1.25em solid #fff;
+	border-top-width: 4.5em;
+	border-bottom-width: 0;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+	position: relative;
+	@include respond-to-max($c-vp) {
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			left: 50%;
+			top: -3.5em;
+			margin-left: -7px;
+			background-color: #999;
+			z-index: 2;
+		}
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 80px;
+			height: 6px;
+			border-radius: 5px;
+			left: 50%;
+			top: -2em;
+			margin-left: -40px;
+			background-color:  #999;
+			z-index: 2;
+		}
+	}
+	@include respond-to($c-vp, true) {
+		max-height: 600px;
+		max-width: 780px;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+		border: $default-border-width solid $default-border-color;
+		background-color: transparent;
+		top: 1px; // Nudge bottom border underneath
+		overflow: hidden;
+	}
+	@include respond-to($d-vp, true) {
+		max-height: 500px;
+	}
+}
+
+.ui-item__browser--center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ui-browser {
+	@extend .ratio-9-8;
+	z-index: 1;
+	position: relative;
+}
+
+.ui-browser__top-bar {
+	border: $default-border-width solid #ddd;
+	padding: 1em;
+	font-size: 0.85em;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	@include respond-to($c-vp, true) {
+		padding: 0.75em 1.5em;
+		font-size: 1em;
+		background: #fff;
+		border: 0;
+		border-bottom: $default-border-width solid #ddd;
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			left: 1em;
+			top: 50%;
+			margin-top: -7px;
+			border: $default-border-width solid #666;
+			background-color: lighten(#ddd, 20%);
+		}
+		&::after {
+			left: 2.5em;
+			background-color: lighten(#ddd, 20%);
+		}
+	}
+}
+
+.ui-browser__canvas {
+	background: #222;
+	min-height: 800px;
+	font-size: 1em;	
+	overflow: hidden;
+	font-family: 'Fira Mono', monospace;
+}
+
+.ui-browser__canvas__sidebar {
+	display: none;
+	border-right: 1px solid #666;
+	width: 23%;
+	height: 10000px;
+	position: absolute;
+	left: 0;
+	top: auto;
+	content: "";
+	padding: 1.5em;
+	padding-top: 2em;
+	font-size: 0.65em;
+	background-color: #333;
+	@include respond-to($c-vp, true) {
+		display: block;
+	}
+	li {
+		line-height: 1.6;
+		ul {
+			margin-left: 6px;
+		}
+	}
+}
+
+.ui-browser__canvas__content {
+	padding: 1.5em;
+	font-size: 0.75em;
+	@include respond-to($c-vp, true) {
+		width: 77%;
+		height: 10000px;
+		position: absolute;
+		left: 23%;
+		top: auto;
+		content: "";
+		display: block;
+	}
+	li {
+		margin-bottom: 0.75em;
+		line-height: 1.6;
+		&.comment {
+			margin-top: 2em;
+		}
+	}
+}
+
+

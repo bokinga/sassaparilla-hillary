@@ -1,0 +1,24 @@
+// ------------------------------------------------------------
+// Captions
+// ------------------------------------------------------------
+
+.caption {
+	position: relative;
+	@include respond-to-max($c-vp) {
+		text-align: center;
+	}
+}
+
+.caption--align-center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	@include respond-to($c-vp, true) {
+		max-width: 500px;
+	}
+}
+
+.caption--minor {
+	padding-left: 20px;
+	padding-right: 20px;
+}

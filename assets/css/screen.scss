@@ -1,0 +1,99 @@
+// ::Imports pre-render. Must be after reset
+// ------------------------------------------------------------
+@import "base/libs/required";
+@import "base/libs/reset";
+@import "base/libs/settings";
+@import "base/libs/mixins";
+@import "base/libs/placeholders";
+
+
+/* ::Base styles */
+/* ------------------------------------------------------------ */
+
+html {
+	font-size: 100%;
+	@include respond-to-max(768px) { // Stop at precise width, as we're talking about devices
+		-webkit-text-size-adjust: 100%;	// Stops text scaling in iOS.
+	}
+}
+
+body {
+	@extend %font-body;
+	background: $body-color;
+	color: $base-color;
+}
+
+
+// General link control
+// ------------------------------------------------------------
+
+// Hat tip: http://robsterlini.co.uk/posts/opentype-and-selection-dont-mix
+::selection {
+	 background: $action;
+	 color: #fff;
+	 text-shadow: inherit;
+}
+
+a {
+	color: $action;
+	text-decoration:none;
+	word-wrap: break-word;
+	@include link-active-styles { 	// Mixin for interactions (hover,focus,active)
+		color: $action-respond;
+	}	
+}
+
+
+// General image contral
+// ------------------------------------------------------------
+
+.max-width {
+	@extend %max-width;
+}
+
+
+// General type control
+// ------------------------------------------------------------
+
+p, span, cite, ol, ul, pre, label, input, textarea 	{ 
+	@include adjust-font-size-to($para); 
+}
+
+h1,h2,h3,h4,h5,h6 { 
+	color: $heading-color;
+}
+
+ul, ol 	{ 
+	@include nobullet; 
+} 						
+	
+li { 
+	line-height: inherit; 
+}		
+			
+strong, b { 
+	font-weight: 700; 
+}
+
+em, i, q { 
+	font-style: italic; 
+}
+
+
+/* ::Import styles */
+// Must be after globals for correct cascade
+/* ------------------------------------------------------------ */
+
+@import "base/libs/forms";
+@import "modules/*"; 
+
+
+/* ::Print */
+/* ------------------------------------------------------------ */
+
+@media print {
+	body {
+		@include adjust-leading-to(2);
+		font-size: percentage(10 / 16);
+	}
+}

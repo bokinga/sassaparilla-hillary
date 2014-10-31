@@ -1,0 +1,62 @@
+@include grid;
+
+// ------------------------------------------------------------
+
+.row {
+	@extend %pie-clearfix;
+	min-width: auto; 
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $internal-spacing-percent;
+	padding-right: $internal-spacing-percent;
+	@include grid_columns(1);
+	@include respond-to($a-vp, true) {	// We want IE < 9 to pick this up, so set true
+		@include grid_columns(2);
+	}
+	@include respond-to($b-vp, true) {	// We want IE < 9 to pick this up, so set true
+		@include grid_columns(3);
+		@include grid_columns(4);
+	}
+	@include respond-to($c-vp, true) {	// We want IE < 9 to pick this up, so set true
+		@include grid_columns(6);
+		@include grid_columns(8);
+	}
+	@include respond-to($d-vp, true) {	// We want IE < 9 to pick this up, so set true
+		@include grid_columns(10);
+		@include grid_columns(12);
+	}
+	@include respond-to($max-vp) {
+		padding-left: $internal-spacing-percent*3;
+		padding-right: $internal-spacing-percent*3;
+	}
+	// IE less than 9 
+	.lt-ie9 & {
+		width: $ie-fixed-vp;
+	}
+}
+
+.row--gutterless {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.row__module {
+	padding: 2em;
+}
+
+// Drag row left to allow for equal spaced grid. AKA gutters
+// Gutters set in mixins.scss file
+.row__colspaced {
+	position: relative;
+	@extend %pie-clearfix;
+	@include respond-to($start-columns) {			
+		min-width: (100% + $internal-spacing-percent); 	
+		left: -$internal-spacing-percent; 	
+	}
+	.lt-ie9 & { 
+		max-width: 100%; 
+		min-width: auto; 
+		left: auto; 
+	}
+}

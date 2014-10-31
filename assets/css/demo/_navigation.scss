@@ -1,0 +1,16 @@
+// ------------------------------------------------------------
+// Navigation
+// ------------------------------------------------------------
+
+.navigation-primary {
+	display: inline-block;
+	float: right;
+}
+
+.navigation-primary__item {
+	display: inline-block;
+	margin-left: 1em;
+	@include respond-to($c-vp, true) {  // We want IE < 9 to pick this up, so 'true'
+		margin-left: 2em;
+	}
+}
